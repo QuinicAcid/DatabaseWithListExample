@@ -7,6 +7,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 public class CountriesDbAdapter {
 
@@ -71,20 +72,29 @@ public class CountriesDbAdapter {
         }
     }
 
-    public long createCountry(String code, String name,
-                              String uri) {
+    public boolean createCountry(String code, String name, String uri) {
+        int doneDelete = 0;
 
-        // if (myCursor.getCount() <= {
-        // return true
-        // return false
-        ContentValues initialValues = new ContentValues();
-        initialValues.put(KEY_CODE, code);
-        initialValues.put(KEY_NAME, name);
-        initialValues.put(KEY_URI, uri);
+        Cursor myCreateCursor = null;
 
-        Log.d("CountryDB","A record should have been entered");
-        return mDb.insert(SQLITE_TABLE, null, initialValues);
+        myCreateCursor = fetchCountriesByName(code);
+        if (myCreateCursor.getCount() == 0) {
+            // if (myCursor.getCount() <= {
+            // return true
+            // return false
+            ContentValues initialValues = new ContentValues();
+            initialValues.put(KEY_CODE, code);
+            initialValues.put(KEY_NAME, name);
+            initialValues.put(KEY_URI, uri);
 
+            Log.d("CountryDB", "A record should have been entered");
+            long insert = mDb.insert(SQLITE_TABLE, null, initialValues);
+        } else {
+            myCreateCursor.close();
+            Log.d("CountryDB", "Country code" + code + " already exists and cannot be created.");
+            return false;
+        }
+        return true;
     }
 
     public boolean deleteOneCountry(String inputCode) {
