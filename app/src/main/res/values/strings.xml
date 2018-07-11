@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DatabaseWithListExample</string>
+    <string name="hintCode">Enter code</string>
+    <string name="hintName">Enter Name</string>
+    <string name="hintURL">Enter URL with http// prefix</string>
+    <string name="btnAdd">ADD COUNTRY</string>
+    <string name="btnDel">DELETE COUNTRY</string>
+    <string name="txtButtonAdd">ADD</string>
+    <string name="txtButtonDelete">DELETE RECORD</string>
+    <string name="txtDeleteInstructions">Enter the country code you want to delete</string>
+    <string name="hintDelete">Code to Delete</string>
+    <string name="enter_country_to_search_on">Enter country to search on</string>
+</resources>
