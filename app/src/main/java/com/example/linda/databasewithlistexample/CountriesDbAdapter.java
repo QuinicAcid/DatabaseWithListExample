@@ -168,17 +168,16 @@ public class CountriesDbAdapter {
         createCountry("AGO","Angola","Africa","Central Africa");
         createCountry("AIA","Anguilla","North America","Caribbean");
 */
-        createCountry("LOA","Loas","wikiLoas");
-        createCountry("UGA","Uganda","wikiUganda");
-        createCountry("USA","United States of America","wikiUSA");
-
-        createCountry("AFG","Afghanistan","wikiAsia");
-        createCountry("ALB","Albania","wikiEurope");
-        createCountry("DZA","Algeria","wikiAfrica");
-        createCountry("ASM","American Samoa","wikiOceania");
-        createCountry("AND","Andorra","wikiEurope");
-        createCountry("AGO","Angola","wikiAfrica");
-        createCountry("AIA","Anguilla","wikiNorth America");
+        createCountry("LOA","Loas","https://en.wikipedia.org/wiki/Loas");
+        createCountry("UGA","Uganda","https://en.wikipedia.org/wiki/Uganda");
+        createCountry("USA","United States of America","https://en.wikipedia.org/wiki/");
+        createCountry("AFG","Afghanistan","https://en.wikipedia.org/wiki/Usa");
+        createCountry("ALB","Albania","https://en.wikipedia.org/wiki/Albania");
+        createCountry("DZA","Algeria","https://en.wikipedia.org/wiki/Algeria");
+        createCountry("ASM","American Samoa","https://en.wikipedia.org/wiki/American_Samoa");
+        createCountry("AND","Andorra","https://en.wikipedia.org/wiki/Andorra");
+        createCountry("AGO","Angola","https://en.wikipedia.org/wiki/Angola");
+        createCountry("AIA","Anguilla","https://en.wikipedia.org/wiki/Anguilla");
     }
 
 }
