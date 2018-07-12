@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddNewCountry" />
-        <activity android:name=".DeleteCountry"></activity>
+        <activity android:name=".DeleteCountry" />
+        <activity android:name=".SingleView"></activity>
     </application>
 
 </manifest>

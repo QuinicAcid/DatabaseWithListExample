@@ -106,15 +106,30 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> listView, View view,
                                     int position, long id) {
+                /*
                 // Get the cursor, positioned to the corresponding row in the result set
+                Cursor cursor = (Cursor) listView.getItemAtPosition(position);
 
+                // Get the state's capital from this row in the database.
+                String code = cursor.getString(cursor.getColumnIndexOrThrow("code"));
+                //Toast.makeText(getApplicationContext(), code, Toast.LENGTH_SHORT).show();
+                */
 
                 Cursor cursor = (Cursor) listView.getItemAtPosition(position);
 
                 // Get the state's capital from this row in the database.
-                String code =
-                        cursor.getString(cursor.getColumnIndexOrThrow("code"));
-                Toast.makeText(getApplicationContext(), code, Toast.LENGTH_SHORT).show();
+                String code = cursor.getString(cursor.getColumnIndexOrThrow("code"));
+                String name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
+                String uri = cursor.getString(cursor.getColumnIndexOrThrow("uri"));
+
+                Intent intent = new Intent(MainActivity.this, SingleView.class);
+                intent.putExtra("code",code);
+                intent.putExtra("name", name);
+                intent.putExtra("uri", uri);
+
+                startActivity(intent);
+
+
             }
         });
 
