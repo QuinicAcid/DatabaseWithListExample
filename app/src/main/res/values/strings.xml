@@ -10,4 +10,5 @@
     <string name="txtDeleteInstructions">Enter the country code you want to delete</string>
     <string name="hintDelete">Code to Delete</string>
     <string name="enter_country_to_search_on">Enter country to search on</string>
+    <string name="txtGoToWebsite">Go To Website</string>
 </resources>
