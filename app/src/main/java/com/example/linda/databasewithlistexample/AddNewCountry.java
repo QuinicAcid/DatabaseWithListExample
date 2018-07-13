@@ -57,13 +57,10 @@ public class AddNewCountry extends Activity {
 
                 if (strName.equals("")) {
                     Toast.makeText(getBaseContext(), "Country name cannot be blank.", Toast.LENGTH_LONG).show();
-                } else if (strName.equals("delete")) {
+                } else if (strName.equals("reset")) {
                     dbHelper.deleteAllCountries();
-                    Toast.makeText(getBaseContext(), "Database has been deleted.", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(AddNewCountry.this, MainActivity.class));
-                }else if (strName.equals("add")) {
                     dbHelper.insertSomeCountries();
-                    Toast.makeText(getBaseContext(), "Database has been populated.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Database has been reset.", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(AddNewCountry.this, MainActivity.class));
                 } else if (strUri.equals("")) {
                     Toast.makeText(getBaseContext(), "URL cannot be blank.", Toast.LENGTH_LONG).show();

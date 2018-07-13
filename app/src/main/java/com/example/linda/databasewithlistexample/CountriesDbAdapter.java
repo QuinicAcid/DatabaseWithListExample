@@ -168,16 +168,16 @@ public class CountriesDbAdapter {
         createCountry("AGO","Angola","Africa","Central Africa");
         createCountry("AIA","Anguilla","North America","Caribbean");
 */
-        createCountry("LOA","Loas","https://en.wikipedia.org/wiki/Loas");
-        createCountry("UGA","Uganda","https://en.wikipedia.org/wiki/Uganda");
-        createCountry("USA","United States of America","https://en.wikipedia.org/wiki/");
-        createCountry("AFG","Afghanistan","https://en.wikipedia.org/wiki/Usa");
-        createCountry("ALB","Albania","https://en.wikipedia.org/wiki/Albania");
-        createCountry("DZA","Algeria","https://en.wikipedia.org/wiki/Algeria");
-        createCountry("ASM","American Samoa","https://en.wikipedia.org/wiki/American_Samoa");
-        createCountry("AND","Andorra","https://en.wikipedia.org/wiki/Andorra");
-        createCountry("AGO","Angola","https://en.wikipedia.org/wiki/Angola");
-        createCountry("AIA","Anguilla","https://en.wikipedia.org/wiki/Anguilla");
+        createCountry("LOA","Loas","https://en.m.wikipedia.org/wiki/Laos");
+        createCountry("UGA","Uganda","https://en.m.wikipedia.org/wiki/Uganda");
+        createCountry("USA","United States of America","https://en.m.wikipedia.org/wiki/United_States");
+        createCountry("AFG","Afghanistan","https://en.m.wikipedia.org/wiki/Afghanistan");
+        createCountry("ALB","Albania","https://en.m.wikipedia.org/wiki/Albania");
+        createCountry("DZA","Algeria","https://en.m.wikipedia.org/wiki/Algeria");
+        createCountry("ASM","American Samoa","https://en.m.wikipedia.org/wiki/American_Samoa");
+        createCountry("AND","Andorra","https://en.m.wikipedia.org/wiki/Andorra");
+        createCountry("AGO","Angola","https://en.m.wikipedia.org/wiki/Angola");
+        createCountry("AIA","Anguilla","https://en.m.wikipedia.org/wiki/Anguilla");
     }
 
 }
