@@ -52,10 +52,9 @@
         android:text="TextView" />
 
 
-
     <TextView
         android:id="@+id/uri"
-        android:layout_width="259dp"
+        android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/textView2"

@@ -1,4 +1,5 @@
 package com.example.linda.databasewithlistexample;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -56,26 +57,24 @@ public class MainActivity extends Activity {
         dbHelper = new CountriesDbAdapter(this);
         dbHelper.open();
 
-        //Clean all data
+        // Clean all data
+        // dbHelper.deleteAllCountries();
+        // Add some data
+        // dbHelper.insertSomeCountries();
 
-     // dbHelper.deleteAllCountries();
-        //Add some data
-     // dbHelper.insertSomeCountries();
-
-        //Generate ListView from SQLite Database
+        // Generate ListView from SQLite Database
         DisplayTheList();
 
-            }
+    }
 
 
-    private void DisplayTheList()
-        {
+    private void DisplayTheList() {
 
 
         Cursor cursor = dbHelper.fetchAllCountries();
 
         // The desired columns to be bound
-       String[] columns = new String[]{
+        String[] columns = new String[]{
                 CountriesDbAdapter.KEY_CODE,
                 CountriesDbAdapter.KEY_NAME,
                 CountriesDbAdapter.KEY_URI,
@@ -97,7 +96,7 @@ public class MainActivity extends Activity {
                 to,
                 0);
 
-        ListView listView = (ListView) findViewById(R.id.listView1);
+        final ListView listView = (ListView) findViewById(R.id.listView1);
         // Assign adapter to ListView
         listView.setAdapter(dataAdapter);
 
@@ -123,7 +122,7 @@ public class MainActivity extends Activity {
                 String uri = cursor.getString(cursor.getColumnIndexOrThrow("uri"));
 
                 Intent intent = new Intent(MainActivity.this, SingleView.class);
-                intent.putExtra("code",code);
+                intent.putExtra("code", code);
                 intent.putExtra("name", name);
                 intent.putExtra("uri", uri);
 
@@ -138,15 +137,12 @@ public class MainActivity extends Activity {
         myFilter.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {
+            }
 
-           }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-           public void beforeTextChanged(CharSequence s, int start,
-                                         int count, int after) {
-           }
-
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 dataAdapter.getFilter().filter(s.toString());
             }
         });
@@ -156,7 +152,8 @@ public class MainActivity extends Activity {
                 return dbHelper.fetchCountriesByName(constraint.toString());
             }
         });
-    }}
+    }
+}
 
 
 
